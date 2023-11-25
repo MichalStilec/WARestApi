@@ -1,7 +1,32 @@
-GET: GET je jedním ze standardních HTTP požadavků, který se používá pro získání informací ze serveru. V kontextu API pro správu knih, GET požadavek na endpoint /api/books vrací seznam všech knih uložených v databázi.
+# Popis Aplikace
+Tato aplikace slouží k správě informací o knihách. Umožňuje uživatelům získat seznam všech knih, přidávat nové knihy, aktualizovat informace o existujících knihách a odstraňovat knihy ze systému.
 
-POST: POST slouží k odeslání dat na server s cílem vytvořit nový záznam. V API pro knihy, POST požadavek na /api/books slouží k přidání nové knihy do databáze na základě poskytnutých informací.
+# Endpointy
 
-PUT: PUT je využívána pro aktualizaci existujících záznamů na serveru. V případě knižního API, PUT požadavek na /api/books umožňuje aktualizaci informací o existující knize na základě poskytnutých údajů.
+Metoda: GET
+Endpoint: /
+Autentizace: Ano (kontrola pomocí checkAuthenticated middleware)
+Popis: Vrátí seznam všech knih uložených v systému.
+Odpověď při úspěchu (HTTP kód 200): Seznam knih ve formátu JSON.
+Odpověď při chybě (HTTP kód 400): Chybová zpráva v případě problému s dotazem na databázi.
 
-DELETE: DELETE slouží k odstranění záznamu na serveru. V API pro knihy, DELETE požadavek na /api/books odstraní knihu z databáze na základě identifikátoru knihy poskytnutého ve vstupních datech.
+Metoda: POST
+Endpoint: /
+Autentizace: Ano (kontrola pomocí checkAuthenticated middleware)
+Popis: Přidá novou knihu do systému na základě poskytnutých informací.
+Odpověď při úspěchu (HTTP kód 200): Potvrzující zpráva o úspěšném přidání knihy.
+Odpověď při chybě (HTTP kód 400): Chybová zpráva v případě nesprávně poskytnutých informací nebo problému s databází.
+
+Metoda: PUT
+Endpoint: /
+Autentizace: Ano (kontrola pomocí checkAuthenticated middleware)
+Popis: Aktualizuje informace o existující knize na základě poskytnutých informací.
+Odpověď při úspěchu (HTTP kód 200): Potvrzující zpráva o úspěšné aktualizaci knihy.
+Odpověď při chybě (HTTP kód 400): Chybová zpráva v případě nesprávně poskytnutých informací nebo problému s databází.
+
+Metoda: DELETE
+Endpoint: /
+Autentizace: Ano (kontrola pomocí checkAuthenticated middleware)
+Popis: Odstraní knihu ze systému na základě poskytnutého identifikátoru knihy.
+Odpověď při úspěchu (HTTP kód 200): Potvrzující zpráva o úspěšném odstranění knihy.
+Odpověď při chybě (HTTP kód 400): Chybová zpráva v případě nesprávně poskytnutého identifikátoru knihy nebo problému s databází.
