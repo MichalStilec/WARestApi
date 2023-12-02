@@ -1,4 +1,4 @@
-# Odkaz ne server
+# Odkaz na server
 http://16.171.11.82/
 
 
