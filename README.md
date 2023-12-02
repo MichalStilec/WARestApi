@@ -1,4 +1,4 @@
-# Odkaz na server
+# Odkaz na IP adresu
 http://16.171.11.82/
 
 
