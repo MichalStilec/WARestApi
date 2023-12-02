@@ -1,3 +1,7 @@
+# Odkaz ne server
+http://16.171.11.82/
+
+
 # Popis Aplikace
 Tato aplikace slouží k správě informací o knihách. Umožňuje uživatelům získat seznam všech knih, přidávat nové knihy, aktualizovat informace o existujících knihách a odstraňovat knihy ze systému.
 
